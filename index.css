@@ -9,6 +9,14 @@ body {
   width: min(960px, 92%);
   margin: 0 auto;
 }
+.no-underline {
+  text-decoration: none;
+  color: #1b1b1b;
+}
+.logo-logo {
+  height: 100%;
+  width: 10%;
+}
 
 .site-header {
   border-bottom: 1px solid #e5e7eb;
@@ -19,14 +27,18 @@ body {
 
 .site-header .container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 8px;
   padding: 14px 0;
 }
 
 .logo {
   margin: 0;
   font-size: 1.2rem;
+}
+
+nav {
+  margin-left: auto;
 }
 
 nav {
