@@ -11,9 +11,11 @@ body {
 }
 
 .site-header {
-  background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
+  background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRreQ-wmwwgOix4hvVcswul2aZg6M7zPk6PdJsxbvq5-kFRcTa-");
+  background-size: cover;
 }
+
 
 .site-header .container {
   display: flex;
