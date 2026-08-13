@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+    </style>  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkillSprout </title>
-  <!-- Keep page hidden until full styles apply to avoid any FOUC -->
-  <style>html{visibility:hidden}</style>
+  <title>SkillSprout</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <img class="logo-logo" src="assets/logo.png" alt="SkillSprout logo">
+      <img src="logo.png" class="logo-logo">
       <h1 class="logo"><a href="/" class="no-underline">SkillSprout</a></h1>
       <nav aria-label="Main navigation">
-        <a href="/">Home</a>
+        <a href="/home">Home</a>
         <a href="/explore">Explore</a>
         <a href="/about">About</a>
       </nav>
@@ -25,10 +27,9 @@
       <p class="eyebrow">Learn one step at a time</p>
       <h2>Grow practical skills with simple, guided learning paths.</h2>
       <p class="hero-copy">
-        SkillSprout helps you pick a topic, stay consistent, and track small wins.<br>
-        <a href="/about">Learn more about SkillSprout and who made it here!</a>
+        SkillSprout helps you pick a topic, stay consistent, and track small wins.<br> <a href="about">Learn more about SkillSprout and who made it here!</a>
       </p>
-      <a class="cta" href="/login">Get Started</a>
+      <a class="cta" href="#">Get Started</a>
     </section>
   </main>
 
@@ -38,6 +39,6 @@
     </div>
   </footer>
 
-  <script type="module" src="/src/index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
