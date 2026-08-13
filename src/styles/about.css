@@ -1,0 +1,12 @@
+html{visibility:visible}
+
+/* Styles specific to about page - leave empty or add page-specific rules here */
+
+h1 {
+  font-size: 1.8rem;
+  margin: 24px 0 8px;
+}
+
+p {
+  max-width: 60ch;
+}
