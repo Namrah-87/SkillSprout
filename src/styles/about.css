@@ -1,7 +1,5 @@
 html{visibility:visible}
 
-/* Styles specific to about page - leave empty or add page-specific rules here */
-
 h1 {
   font-size: 1.8rem;
   margin: 24px 0 8px;
@@ -9,4 +7,19 @@ h1 {
 
 p {
   max-width: 60ch;
+}
+.orbitron-custom {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500px;
+  font-style: normal;
+}
+
+.container {
+  width: min(960px, 92%);
+  margin: 0 auto;
+}
+.no-underline {
+  text-decoration: none;
+  color: #1b1b1b;
 }
