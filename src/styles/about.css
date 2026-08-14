@@ -1,4 +1,6 @@
-html{visibility:visible}
+html {
+  visibility: visible
+}
 
 h1 {
   font-size: 1.8rem;
@@ -8,6 +10,7 @@ h1 {
 p {
   max-width: 60ch;
 }
+
 .orbitron-custom {
   font-family: "Orbitron", sans-serif;
   font-optical-sizing: auto;
@@ -19,6 +22,11 @@ p {
   width: min(960px, 92%);
   margin: 0 auto;
 }
+
+.main-content {
+  padding-left: 10%;
+}
+
 .no-underline {
   text-decoration: none;
   color: #1b1b1b;
