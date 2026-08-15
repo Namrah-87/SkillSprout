@@ -1,0 +1,127 @@
+html {
+  visibility: visible;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #1b1b1b;
+  background: #f8fafc;
+}
+
+.container {
+  width: min(960px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  border-bottom: 1px solid #e5e7eb;
+  background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRreQ-wmwwgOix4hvVcswul2aZg6M7zPk6PdJsxbvq5-kFRcTa-");
+  background-size: cover;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 0;
+}
+
+.logo-logo {
+  height: 40px;
+  width: auto;
+  margin-right: 12px;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: "Orbitron", Arial, sans-serif;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: #1b1b1b;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 16px;
+}
+
+nav a {
+  color: #334155;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.main-content {
+  min-height: calc(100vh - 120px);
+  display: grid;
+  place-items: center;
+  padding: 32px 16px;
+}
+
+.signup-card {
+  width: min(480px, 100%);
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 32px 24px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+}
+
+.signup-card h2 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.signup-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.signup-form input {
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.signup-form button {
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 700;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.status {
+  min-height: 24px;
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+
+.status.error {
+  color: #b91c1c;
+}
+
+.status.success {
+  color: #15803d;
+}

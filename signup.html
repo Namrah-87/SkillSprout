@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | SkillSprout</title>
+    <link rel="stylesheet" href="/src/styles/signup.css">
+    <script type="module" src="/src/signup.js" defer></script>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <img src="/assets/logo.png" class="logo-logo" alt="SkillSprout logo">
+        <h1 class="logo"><a href="/index.html" class="no-underline">SkillSprout</a></h1>
+        <nav aria-label="Main navigation">
+          <a href="/index.html">Home</a>
+          <a href="#">Explore</a>
+          <a href="/about.html">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <section class="signup-card">
+        <h2>Create your account</h2>
+        <form id="signup-form" class="signup-form">
+          <label>
+            Email
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </label>
+
+          <label>
+            Password
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+          </label>
+
+          <button type="submit">Sign up</button>
+        </form>
+        <p id="signup-status" class="status" aria-live="polite"></p>
+      </section>
+    </main>
+  </body>
+</html>

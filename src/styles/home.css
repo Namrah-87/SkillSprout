@@ -1,0 +1,77 @@
+html {
+    visibility: visible
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+    margin: 24px 0 8px;
+  }
+  
+  p {
+    max-width: 60ch;
+  }
+  
+  .orbitron-custom {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .container {
+    width: min(960px, 92%);
+    margin: 0 auto;
+  }
+  
+  .main-content {
+    padding-left: 10%;
+  }
+  
+  .no-underline {
+    text-decoration: none;
+    color: #1b1b1b;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #1b1b1b;
+    background: #f8fafc;
+  }
+  
+  .logo-logo {
+    height: 40px;
+    width: auto;
+    margin-right: 12px;
+  }
+  
+  .site-header {
+    border-bottom: 1px solid #e5e7eb;
+    background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRreQ-wmwwgOix4hvVcswul2aZg6M7zPk6PdJsxbvq5-kFRcTa-");
+    background-size: cover;
+  }
+  
+  .site-header .container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 0;
+  }
+  
+  .logo {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: "Orbitron", Arial, sans-serif;
+  }
+  
+  nav {
+    margin-left: auto;
+    display: flex;
+    gap: 16px;
+  }
+  
+  nav a {
+    color: #334155;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
