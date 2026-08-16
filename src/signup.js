@@ -22,7 +22,7 @@ if (form) {
         return;
       }
 
-      status.textContent = 'Account created successfully!';
+      status.textContent = 'Account created successfully! Please check your email, especialy spam.';
       status.classList.add('success');
       form.reset();
     } catch (error) {
