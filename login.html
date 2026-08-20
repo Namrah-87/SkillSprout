@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | SkillSprout</title>
+    <link rel="stylesheet" href="/src/styles/login.css">
+    <script type="module" src="/src/login.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <img src="assets/logo.png" class="logo-logo">
+            <h1 class="logo"><a href="/index.html" class="no-underline">SkillSprout</a></h1>
+            <nav aria-label="Main navigation">
+                <a href="/index.html">Home</a>
+                <a href="#">Explore</a>
+                <a href="/about.html">About</a>
+            </nav>
+        </div>
+    </header>
+    <div class="main-content">
+        <form id="login-form" class="login-form">
+            <h1>Login to your account</h1>
+            <label for="email">Email
+                <input type="text" id="email" name="email_field" placeholder="you@example.com" required>
+            </label>
+            <label for="email">Password
+                <input type="password" id="password" name="password_field" placeholder="Enter your password here"
+                    required>
+            </label>
+            <button type="submit">Log in</button>
+        </form>
+        <p id="login-status" class="status" aria-live="polite"></p>
+        <div id="main">
+</body>
+
+</html>
