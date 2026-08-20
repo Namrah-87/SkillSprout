@@ -100,13 +100,13 @@ html {
   }
   /* Heading for onboarding card */
   .onboarding h1 {
-    margin: 0;
+    margin: 2px 0 10px;
     color: white;
     font-size: 40px;
     font-weight: 350;
     text-align: center;
     font-size: clamp(28px, 5vw, 40px);
-    transform: translateX(clamp(-20px, -3vw, -8px));
+    transform: translateX(clamp(-50px, -3.5vw, -18px));
   }
   .onboarding-btns {
     display: grid;
@@ -114,7 +114,7 @@ html {
     gap: 16px;
   
     width: 80%;
-    margin: 140px auto 0;
+    margin: 60px auto 0;
   }
   .onboarding-btns button {
     /* Positioning of button */
@@ -131,6 +131,14 @@ html {
     border-width: 2px;
     font-size: 18px;
     cursor: pointer;
+  }
+  #back-btn {
+    background-color: transparent;
+    border-style: none;
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500 !important;
   }
   .onboarding h5 {
     margin: 0;
