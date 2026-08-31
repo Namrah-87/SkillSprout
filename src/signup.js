@@ -9,12 +9,14 @@ if (form) {
 
     const email = document.querySelector('#email').value.trim();
     const password = document.querySelector('#password').value;
+    const username = document.querySelector('#username').value.trim();
+    const name_var = document.querySelector('#name').value;
 
     status.textContent = 'Creating account...';
     status.className = 'status';
 
     try {
-      const result = await signUpNewUser(email, password);
+      const result = await signUpNewUser(email, password, name_var, username);
 
       if (!result.success) {
         status.textContent = result.error || 'Sign up failed.';
