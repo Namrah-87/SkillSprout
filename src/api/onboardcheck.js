@@ -5,7 +5,7 @@ const supabase = createClient(
   'sb_publishable_KkFAWS-xVB5FSWJu9uld2Q_VzOLe9Dk'
 );
 
-export async function check_onboard(update, check, hear) {
+export async function check_onboard(update, check, hear, who) {
   try {
     let userId = null;
 
@@ -47,13 +47,14 @@ export async function check_onboard(update, check, hear) {
 
       if (error) {
         console.error("[ERROR] PROFILE QUERY FAILED:", error.message);
-        return;
+        return false;
       }
 
       if (!data) {
         console.warn("[WARN] Profile query returned NO DATA");
-        return;
+        return false;
       }
+      return data.has_completed_onboarding; 
     }
 
     // -----------------------------------------
@@ -74,7 +75,7 @@ export async function check_onboard(update, check, hear) {
     // -----------------------------------------
     // STEP 4: Update "hear" source (If hear parameter is provided)
     // -----------------------------------------
-    if (hear) {
+    if (hear && hear != null) {
       console.log("Starting update process for 'hear' field...");
       const { error: updateErrorHear } = await supabase
         .from('profiles')
@@ -83,6 +84,19 @@ export async function check_onboard(update, check, hear) {
 
       if (updateErrorHear) {
         console.error("[ERROR] HOW DID YOU HEAR ABOUT US? UPDATE FAILED:", updateErrorHear.message);
+        return;
+      }
+    }
+
+    if (who && who != null) {
+      console.log("Starting update process for 'who' field...");
+      const { error: updateErrorWho } = await supabase
+        .from('profiles')
+        .update({ who: who })
+        .eq('id', userId);
+
+      if (updateErrorWho) {
+        console.error("[ERROR] WHO ARE YOU? UPDATE FAILED:", updateErrorWho.message);
         return;
       }
     }

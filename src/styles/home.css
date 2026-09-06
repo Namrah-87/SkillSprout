@@ -1,160 +1,167 @@
 html {
-    visibility: visible
-  }
-  
-  h1 {
-    font-size: 1.8rem;
-    margin: 24px 0 8px;
-  }
-  
-  p {
-    max-width: 60ch;
-  }
-  
-  .orbitron-custom {
-    font-family: "Orbitron", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .container {
-    width: min(960px, 92%);
-    margin: 0 auto;
-  }
-  
-  .main-content {
-    padding-left: 10%;
-  }
-  
-  .no-underline {
-    text-decoration: none;
-    color: #1b1b1b;
-  }
-  
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #1b1b1b;
-    background: #f8fafc;
-  }
-  
-  .logo-logo {
-    height: 40px;
-    width: auto;
-    margin-right: 12px;
-  }
-  
-  .site-header {
-    border-bottom: 1px solid #e5e7eb;
-    background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRreQ-wmwwgOix4hvVcswul2aZg6M7zPk6PdJsxbvq5-kFRcTa-");
-    background-size: cover;
-  }
-  
-  .site-header .container {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 14px 0;
-  }
-  
-  .logo {
-    margin: 0;
-    font-size: 1.2rem;
-    font-family: "Orbitron", Arial, sans-serif;
-  }
-  
-  nav {
-    margin-left: auto;
-    display: flex;
-    gap: 16px;
-  }
-  
-  nav a {
-    color: #334155;
-    text-decoration: none;
-    font-size: 0.95rem;
-  }
-  /* Onboarding card */
-  .onboarding {
-    /* Styling and padding */
-    background-color: black;
-    font-size: clamp(28px, 5vw, 40px);
-    box-sizing: border-box;
-    width: min(700px, calc(100% - 32px));
-    min-height: 400px;
-    max-height: calc(100dvh - 32px);
-    padding: 0 0 0 0;
-    /* Card style positioning in center of page above all elements */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999; 
-    /* Border */ 
-    border-radius: 15px;
-    border-color: grey;
-    border-width: 4px;
-    border-style: solid;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); 
-  }
-  /* Heading for onboarding card */
-  .onboarding h1 {
-    margin: 2px 0 10px;
-    color: white;
-    font-size: 40px;
-    font-weight: 350;
-    text-align: center;
-    font-size: clamp(28px, 5vw, 40px);
-    transform: translateX(clamp(-50px, -3.5vw, -18px));
-  }
-  .onboarding-btns {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  
-    width: 80%;
-    margin: 60px auto 0;
-  }
-  .onboarding-btns button {
-    /* Positioning of button */
-    width: 100%;
-    min-height: 48px;
-    /* Styling of button */
-    background-image: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRreQ-wmwwgOix4hvVcswul2aZg6M7zPk6PdJsxbvq5-kFRcTa-');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    border-radius: 10px;
-    border-style: solid;
-    border-color: blue;
-    border-width: 2px;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  #prev-btn {
-    all: unset;
-    background-color: transparent;
-    top: 0;
-    left: 0;
-    border-style: none;
-    color: white;
-    cursor: pointer;
-    font-size: 17px;
-    font-weight: 500 !important;
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    z-index: 10000;
-  }
-  .onboarding h5 {
-    margin: 0;
-    color: rgba(200, 200, 200, 1);
-    text-align: center;
-    font-size: clamp(17.5px, 3.13vw, 25px);
-  }
-  .user_hero {
-    background-color: purple;
-    height: 20px;
-    width: 67px;
-  }
+  visibility: visible
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 24px 0 8px;
+}
+
+p {
+  max-width: 60ch;
+}
+
+.orbitron-custom {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.container {
+  width: min(960px, 92%);
+  margin: 0 auto;
+}
+
+.main-content {
+  padding-left: 10%;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: #1b1b1b;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #1b1b1b;
+  background: #f8fafc;
+}
+
+.logo-logo {
+  height: 40px;
+  width: auto;
+  margin-right: 12px;
+}
+
+.site-header {
+  border-bottom: 1px solid #e5e7eb;
+  background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRreQ-wmwwgOix4hvVcswul2aZg6M7zPk6PdJsxbvq5-kFRcTa-");
+  background-size: cover;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 0;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: "Orbitron", Arial, sans-serif;
+}
+
+nav {
+  margin-left: auto;
+  display: flex;
+  gap: 16px;
+}
+
+nav a {
+  color: #334155;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* Onboarding card */
+.onboarding {
+  /* Styling and padding */
+  background-color: black;
+  font-size: clamp(28px, 5vw, 40px);
+  box-sizing: border-box;
+  width: min(700px, calc(100% - 32px));
+  min-height: 400px;
+  max-height: calc(100dvh - 32px);
+  padding: 0 0 0 0;
+  /* Card style positioning in center of page above all elements */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  /* Border */
+  border-radius: 15px;
+  border-color: grey;
+  border-width: 4px;
+  border-style: solid;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading for onboarding card */
+.onboarding h1 {
+  margin: 2px 0 10px;
+  color: white;
+  font-size: 40px;
+  font-weight: 350;
+  text-align: center;
+  font-size: clamp(28px, 5vw, 40px);
+  transform: translateX(clamp(-50px, -3.5vw, -18px));
+}
+
+.onboarding-btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+
+  width: 80%;
+  margin: 60px auto 0;
+}
+
+.onboarding-btns button {
+  /* Positioning of button */
+  width: 100%;
+  min-height: 48px;
+  /* Styling of button */
+  background-image: url('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRreQ-wmwwgOix4hvVcswul2aZg6M7zPk6PdJsxbvq5-kFRcTa-');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: blue;
+  border-width: 2px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#prev-btn {
+  all: unset;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  border-style: none;
+  color: white;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500 !important;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10000;
+}
+
+.onboarding h5 {
+  margin: 0;
+  color: rgba(200, 200, 200, 1);
+  text-align: center;
+  font-size: clamp(17.5px, 3.13vw, 25px);
+}
+
+.user_hero {
+  background-color: purple;
+  height: 20px;
+  width: 67px;
+}
