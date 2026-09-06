@@ -11,7 +11,7 @@
     margin: 0 auto;
   }
   
-  .main-content {
+  .main-content { 
     min-height: calc(100vh - 120px);
     display: grid;
     place-items: center;
