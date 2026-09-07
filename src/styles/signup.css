@@ -9,8 +9,8 @@ html {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  color: #1b1b1b;
-  background: #f8fafc;
+  color: var(--color-text);
+  background: var(--color-bg);
 }
 
 .container {
@@ -19,7 +19,7 @@ body {
 }
 
 .site-header {
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--color-header-border);
   background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRreQ-wmwwgOix4hvVcswul2aZg6M7zPk6PdJsxbvq5-kFRcTa-");
   background-size: cover;
 }
@@ -45,7 +45,7 @@ body {
 
 .no-underline {
   text-decoration: none;
-  color: #1b1b1b;
+  color: var(--color-text);
 }
 
 nav {
@@ -55,7 +55,7 @@ nav {
 }
 
 nav a {
-  color: #334155;
+  color: var(--color-nav-link);
   text-decoration: none;
   font-size: 0.95rem;
 }
@@ -69,11 +69,11 @@ nav a {
 
 .signup-card {
   width: min(480px, 100%);
-  background: #fff;
-  border: 1px solid #e2e8f0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: 14px;
   padding: 32px 24px;
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 14px 30px var(--color-shadow-strong);
 }
 
 .signup-card h2 {
@@ -97,7 +97,7 @@ nav a {
 
 .signup-form input {
   padding: 12px 14px;
-  border: 1px solid #cbd5e1;
+  border: 1px solid var(--color-input-border);
   border-radius: 10px;
   font-size: 1rem;
 }
@@ -105,8 +105,8 @@ nav a {
 .signup-form button {
   border: none;
   border-radius: 10px;
-  background: #2563eb;
-  color: #fff;
+  background: var(--color-primary);
+  color: var(--color-on-primary);
   font-weight: 700; 
   padding: 12px 16px;
   cursor: pointer;
@@ -119,9 +119,10 @@ nav a {
 }
 
 .status.error {
-  color: #b91c1c;
+  color: var(--color-status-error);
 }
 
 .status.success {
-  color: #15803d;
+  color: var(--color-status-success);
 }
+@import './styles.css';
