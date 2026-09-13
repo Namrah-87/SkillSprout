@@ -9,29 +9,48 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="src/styles/home.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About SkillSprout</title>
-    <script type="module" src="/src/home.js" defer></script>
+    <title>Home</title>
 </head>
 
 <body>
     <header class="site-header">
         <div class="container">
-            <img src="assets/logo.png" class="logo-logo">
             <h1 class="logo"><a href="/" class="no-underline">SkillSprout</a></h1>
-            <nav aria-label="Main navigation">
-                <a href="/index.html">Home</a>
-                <a href="#">Explore</a>
-                <a href="/about.html">About</a>
-            </nav>
         </div>
     </header>
-    <div class="main-content">
 
+    <!-- Add this wrapper around your menu and content -->
+    <div class="app-body">
+        <div class="menu">
+            <button id="home">Home</button>
+            <button id="courses">My Courses</button>
+            <button id="explore">Explore</button>
+            <button id="progress">Progress</button>
+            <button id="settings">Settings</button>
+        </div>
+
+        <div class="main_content">
+        <div class="wrapper">
+            <p class="gm">Good morning,</p>
+            <h3>Welcome back, <strong>Blank</strong> 👋</h3>
+        </div>
+            <div class="streak">
+                <p class="streak_describer"><strong>🔥5</strong> day streak</p>
+                <div class="container_streak"><div class="checkbox" id="m"></div><p>M</p></div>
+                <div class="container_streak"><div class="checkbox" id="t"></div><p>T</p></div>
+                <div class="container_streak"><div class="checkbox" id="w"></div><p>W</p></div>
+                <div class="container_streak"><div class="checkbox" id="th"></div><p>T</p></div>
+                <div class="container_streak"><div class="checkbox" id="f"></div><p>F</p></div>
+                <div class="container_streak"><div class="checkbox" id="s"></div><p>S</p></div>
+                <div class="container_streak"><div class="checkbox" id="su"></div><p>S</p></div>
+            </div>
+        </div>
     </div>
+
     <div id="onboard_div_wrapper">
     </div>
 
-    <style src="src/styles/home.css"></style>
 </body>
+<script type="module" src="/src/home.js" defer></script>
 
 </html>

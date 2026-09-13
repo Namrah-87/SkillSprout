@@ -1,6 +1,6 @@
 import { check } from './api/loggedin.js';
 import { check_onboard } from './api/onboardcheck.js';
-
+console.log("stuff")
 async function init() {
   const user = await check();
 
@@ -16,11 +16,11 @@ async function init() {
   const onboard = await check_onboard(false, true)
   console.log(onboard)
   if (onboard == false) {
-    //placeholder
     console.log("You have not completed onboarding");
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const number = urlParams.get('n');
+    
     if (number == 2) {
       const onboard_div = document.getElementById("onboard_div_wrapper")
       onboard_div.innerHTML =
@@ -40,12 +40,10 @@ async function init() {
       `;
       const form = document.querySelector('#form');
       form.addEventListener('click', (event) => {
-        // 3. Check if the clicked element is a button
         if (event.target.tagName === 'BUTTON') {
-          // Prevent default form submission behavior
           event.preventDefault();
+          event.stopPropagation(); // FIX: Prevent event bubbling to the menu listener
 
-          // 4. Extract text and store it in your variable
           var who = event.target.textContent.trim();
           check_onboard(false, false, null, who)
           console.log(who + " Sent check onboard")
@@ -54,6 +52,7 @@ async function init() {
         }
       });
     }
+    
     if (number == 3) {
       const onboard_div = document.getElementById("onboard_div_wrapper")
       onboard_div.innerHTML =
@@ -67,16 +66,17 @@ async function init() {
       `
       const form = document.querySelector('#form');
       form.addEventListener('click', (event) => {
-        // 3. Check if the clicked element is a button
         if (event.target.tagName === 'BUTTON') {
-          // Prevent default form submission behavior
           event.preventDefault();
+          event.stopPropagation(); // FIX: Prevent event bubbling to the menu listener
+          
           check_onboard(true)
           const newUrl = window.location.pathname;
           window.location.replace(newUrl);
         }
       });
     }
+    
     if (!number) {
       const onboard_div = document.getElementById("onboard_div_wrapper")
       onboard_div.innerHTML =
@@ -96,14 +96,11 @@ async function init() {
   </div>
   `
       const form = document.querySelector('#form');
-      // 2. Use event delegation to listen for clicks inside the form
       form.addEventListener('click', (event) => {
-        // 3. Check if the clicked element is a button
         if (event.target.tagName === 'BUTTON') {
-          // Prevent default form submission behavior
           event.preventDefault();
+          event.stopPropagation(); // FIX: Prevent event bubbling to the menu listener
 
-          // 4. Extract text and store it in your variable
           var hear = event.target.textContent.trim();
           check_onboard(false, false, hear)
           console.log(hear + " Sent check onboard")
@@ -111,13 +108,25 @@ async function init() {
           window.location.replace(newUrl);
         }
       });
-
-
-
     }
   }
   else {
-
+    // This side will run normally now once onboarding completes and redirects
+    const menu = document.querySelector(".menu");
+    const home = document.getElementById("home");
+    home.classList.add('active');
+    console.log("starting")
+    menu.addEventListener('click', (event) => {
+      if (event.target.tagName === 'BUTTON') {
+        const buttons = document.querySelectorAll(".menu button");
+        console.log("happening")
+        buttons.forEach(button => {
+          button.classList.remove('active');
+        });
+        
+        event.target.classList.add('active');
+      }
+    });
   }
 }
 

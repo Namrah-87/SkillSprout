@@ -1,10 +1,12 @@
 :root {
   --color-text: #f8fafc;
-  --color-bg: #1b1b1b;
+  --color-text-secondary: #b6b7ba;
+  --color-bg: #110906;
+  --color-bg-secondary: #1b1b1b;
   --color-surface: black;
   --color-border: rgb(48, 43, 43);
   --color-header-border: #33363b;
-  --color-nav-link: #334155;
+  --color-nav-link: #d0d3d8;
   --color-copy-muted: #475569;
   --color-footer-muted: #64748b;
   --color-input-border: #cbd5e1;
@@ -12,6 +14,7 @@
   --color-on-primary: #ffffff;
   --color-status-error: #b91c1c;
   --color-status-success: #15803d;
+  --color-b1: rgb(255, 0, 238);
   --color-black: white;
   --color-white: black;
   --color-onboarding-subtitle: rgba(200, 200, 200, 1);
@@ -21,4 +24,5 @@
   --color-shadow-strong: rgba(15, 23, 42, 0.06);
   --color-shadow-dark: rgba(0, 0, 0, 0.3);
   --gradient-brand: linear-gradient(135deg, #f0156f 0%, #ff6b35 50%, #ffc547 100%);
+  --brand-color-one: #ff6b35;
 }

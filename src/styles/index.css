@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
 @import './styles.css';
+
 html {
   visibility: visible
 }
@@ -10,6 +11,7 @@ body {
   font-family: Arial, sans-serif;
   color: var(--color-text);
   background: var(--color-bg);
+  background: linear-gradient(135deg, #312229 0%, #000000 100%);
 }
 
 .orbitron-custom {
@@ -36,6 +38,7 @@ strong {
 #hcard {
   font-family: "Nunito", sans-serif;
 }
+
 .container {
   width: min(960px, 92%);
   margin: 0 auto;
@@ -54,8 +57,7 @@ strong {
 
 .site-header {
   border-bottom: 1px solid var(--color-header-border);
-  background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRreQ-wmwwgOix4hvVcswul2aZg6M7zPk6PdJsxbvq5-kFRcTa-");
-  background-size: cover;
+  background-color: black;
 }
 
 
@@ -94,55 +96,237 @@ main {
 }
 
 .hero {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 32px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  width: 95%;
+  column-gap: 10%;
+}
+
+.hero_cont_txt {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero_cont_txt p {
+  color: var(--color-text-secondary);
+  font-size: 20px;
 }
 
 .hero h2 {
-  margin: 0 0 -50px;
-  line-height: 0.9;
-  font-size: 50px;
-  grid-column: 1;
+  margin: 0;
+  line-height: 1;
+  font-size: clamp(25px, 6vw, 60px);
 }
 
-.hero h2:nth-of-type(1) {
-  grid-row: 1;
-}
-
-.hero h2:nth-of-type(2) {
-  grid-row: 2;
+.hero h2+h2 {
+  margin-top: 20px;
 }
 
 .cta {
-  display: inline-block;
-  background: var(--color-primary);
+  display: inline-flex;
+  background: var(--gradient-brand);
   color: var(--color-on-primary);
   text-decoration: none;
-  padding: 10px 16px;
+
+  /* FIX 1: Remove vertical padding (10px) so the 50px height works perfectly */
+  padding: 0 16px;
+
   border-radius: 8px;
   font-weight: 600;
-  margin-top: 10px;
+  margin-top: 20px;
   width: auto;
+  height: 50px;
   max-width: 200px;
-  text-align: center;
-  grid-column: 1;
-  grid-row: 3;
-  align-self: start;
+  justify-content: center;
+
+  /* FIX 2: Change align-content to align-items for single-line flex centering */
+  align-items: center;
+
+  /* Optional: You can safely remove 'text-align: center' as flexbox handles it */
 }
 
 .homepage-img {
   grid-column: 2;
   grid-row: 1 / 4;
-
+  justify-self: end;
   background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfDB8fHx8fA%3D%3D");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 300px;
+  height: clamp(200px, 100vw, 500px);
+  width: clamp(100px, 50vw, 500px);
   border-radius: 15px;
+  transform: translateY(50px);
+  border-color: var(--color-b1);
+  border-width: 2px;
+  border-style: solid;
+}
+
+.learners h3 {
+  font-weight: 700;
+  font-size: 35px;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+  margin: -5px;
+  transform: translate(15px, 7px);
+}
+
+.learners p {
+  margin: 5px 0 5px 0;
+  color: var(--color-text-secondary);
+  transform: translate(15px, 7px);
+}
+
+.learners {
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--color-border);
+  border-radius: 15px;
+  background-color: var(--color-bg-secondary);
+  padding: 0 5px 0 5px;
+  width: fit-content;
+  grid-column: 2;
+  grid-row: 4;
+  transform: translate(-40px);
+  z-index: 999;
+  width: 170px;
+  height: 110px;
+}
+
+.preview h2 {
+  background: var(--gradient-brand);
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  font-size: 18px;
+}
+
+.preview h3 {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-text);
+  margin: -5px;
+  transform: translateX(15px);
+}
+
+.preview p {
+  margin: 5px 0 5px 0;
+  color: var(--color-text-secondary);
+  transform: translateX(15px);
+  font-size: 13px;
+}
+
+.preview progress {
+  width: 100%;
+  height: 12px;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 8px;
+}
+
+/* Background / empty section */
+.preview progress::-webkit-progress-bar {
+  background: var(--color-border);
+  border-radius: 20px;
+  height: 8px;
+}
+
+/* Filled section */
+.preview progress::-webkit-progress-value {
+  background: var(--gradient-brand);
+  border-radius: 20px;
+  height: 8px;
+}
+
+/* Firefox */
+.preview progress::-moz-progress-bar {
+  background: var(--gradient-brand);
+  border-radius: 20px;
+  height: 8px;
+}
+
+.preview {
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--color-border);
+  border-radius: 15px;
+  background-color: var(--color-bg-secondary);
+  padding: 0 5px 0 5px;
+  width: fit-content;
+  grid-column: 2;
+  grid-row: 4;
+  transform: translate(190px, -530px);
+  z-index: 999;
+  width: 170px;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-secondary);
+  height: 120px;
+  align-items: center;
+  justify-items: center;
+}
+
+.stats h2 {
+  margin: 0;
+  width: fit-content;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 50px;
+  font-family: "Nunito", sans-serif;
+}
+
+.stats p {
+  margin: 0;
+}
+
+.stats div {
+  grid-row: 1;
+  width: fit-content;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+}
+
+
+@media (max-width: 680px) {
+  .homepage-img {
+    display: none !important;
+  }
+
+  .learners {
+    display: none !important
+  }
+
+  .hero {
+    grid-template-columns: 1fr !important;
+    padding: 20px 16px !important;
+  }
+
+  .hero h2 {
+    font-size: clamp(30px, 9vw, 80px)
+  }
+
+  .preview {
+    display: none;
+  }
 }

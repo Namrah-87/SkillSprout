@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import './styles.css';
+
+html {
+  visibility: visible
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; /* Prevents double scrollbars on the main window */
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin: 24px 0 8px;
+}
+
+p {
+  max-width: 60ch;
+}
+
+.orbitron-custom {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.no-underline {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.orbitron-custom {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+
+.site-header {
+    background-color: var(--color-white);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--color-onboarding-border);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+.site-header .container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 0;
+}
+
+.container {
+    width: min(960px, 92%);
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.2rem;
+    font-family: "Orbitron", Arial, sans-serif;
+}
+
+nav {
+    margin-left: auto;
+  }
+  
+  nav {
+    display: flex;
+    gap: 16px;
+  }
+  
+  nav a {
+    color: var(--color-nav-link);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .logo-logo {
+    height: 40px;
+    width: auto;
+    margin-right: 12px;
+  }
